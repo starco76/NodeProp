@@ -5,14 +5,14 @@ $pythonPath = "python.exe"
 # مسیر کامل اسکریپت
 $scriptPath = "C:\NodeProp\meta_handler.py"
 
-# یافتن و متوقف کردن فرآیند مرتبط با اسکریپت
-$process = Get-Process -Name "python" 
-if ($process) {
-    Stop-Process -Id $process.Id -Force
-    Write-Host "Process stopped successfully."
-} else {
-    Write-Host "No running process found for $scriptName."
-}
+# # یافتن و متوقف کردن فرآیند مرتبط با اسکریپت
+# $process = Get-Process -Name "python" 
+# if ($process) {
+#     Stop-Process -Id $process.Id -Force
+#     Write-Host "Process stopped successfully."
+# } else {
+#     Write-Host "No running process found for $scriptName."
+# }
 
 # اجرای مجدد اسکریپت
 Start-Process -FilePath $pythonPath -ArgumentList $scriptPath
