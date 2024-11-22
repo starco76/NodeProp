@@ -3,7 +3,7 @@ $scriptName = "meta_handler.py"
 # مسیر فایل پایتون
 $pythonPath = "python.exe"
 # مسیر کامل اسکریپت
-$scriptPath = "C:\bot\meta_handler.py"
+$scriptPath = "C:\NodeProp\meta_handler.py"
 
 # یافتن و متوقف کردن فرآیند مرتبط با اسکریپت
 $process = Get-Process -Name "python" 
