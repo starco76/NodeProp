@@ -1,14 +1,8 @@
-# نام اسکریپت
-$scriptName = "meta_handler.py"
-# مسیر فایل پایتون
-$pythonPath = "python.exe"
-# مسیر کامل اسکریپت
+$pythonPath = "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\python.exe"
 $scriptPath = "C:\NodeProp\meta_handler.py"
 
-# یافتن و متوقف کردن فرآیند مرتبط با اسکریپت
 $process = Get-Process -Name "python" 
 if ($process) {
-
 } else {
    # اجرای مجدد اسکریپت
     Start-Process -FilePath $pythonPath -ArgumentList $scriptPath
