@@ -201,7 +201,7 @@ class MT5Handler:
                     self.req.check_node()
                     last_check = time()
                 
-                    self.action()
+                self.action()
             except Exception as e:
                 self.req.alarm(str(e))
                 self.log(e)
