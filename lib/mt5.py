@@ -196,11 +196,12 @@ class MT5Handler:
         print('terminals initialized')
         last_check = 0
         while True:
-            if time() - last_check > 60:
-                self.req.check_node()
-                last_check = time()
             try:
-                self.action()
+                if time() - last_check > 60:
+                    self.req.check_node()
+                    last_check = time()
+                
+                    self.action()
             except Exception as e:
                 self.req.alarm(str(e))
                 self.log(e)

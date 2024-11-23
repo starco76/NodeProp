@@ -24,10 +24,13 @@ class Request:
             return str(random.randint(1111,99999))
 
     def _req(self,path:str,data:dict={}):
-        url = self.base_url + f"/node/{path.lstrip('/')}"
-        headers = {'Authorization': f'Token {self.token}'}
-        response = requests.post(url,json=data,headers=headers,verify=False)
-        return response.json()
+        try:
+            url = self.base_url + f"/node/{path.lstrip('/')}"
+            headers = {'Authorization': f'Token {self.token}'}
+            response = requests.post(url,json=data,headers=headers,verify=False)
+            return response.json()
+        except:
+            return {}
         
     def check_node(self):
         return self._req('check',data={'ip':self.ip})
