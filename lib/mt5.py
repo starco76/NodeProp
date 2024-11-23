@@ -41,7 +41,7 @@ class MT5Handler:
                 self.terminals.append(cls)
             except Exception as e:
                 self.req.alarm(f'{path} {e}')
-                self.log(e)
+                self.log(e,extra=path)
                 continue
 
     
