@@ -1,4 +1,4 @@
-$pythonPath = "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\python.exe"
+$pythonPath = "C:\python\python.exe"
 $scriptPath = "C:\NodeProp\meta_handler.py"
 $logFilePath = "C:\NodeProp\script_log.txt"  # مسیر فایل لاگ
 

@@ -142,7 +142,6 @@ class MT5Handler:
         cls: mt5 = self.terminals[terminal_idx]
         for account in accounts:
             ts = time()
-            
             try:
                 login = account['login']
                 password = account['password']
