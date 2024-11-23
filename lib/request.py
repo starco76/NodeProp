@@ -10,8 +10,8 @@ class Request:
         token:str,) -> None:
         self.base_url = base_url.rstrip('/')
         self.token = token
-        self.ip=self.get_server_ip()
-    
+        self.ip= self.get_server_ip()
+        print(self.ip)
     def get_server_ip(self):
         try:
             # Connect to an external host (Google's public DNS server)
