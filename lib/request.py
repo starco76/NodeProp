@@ -27,7 +27,7 @@ class Request:
         try:
             url = self.base_url + f"/node/{path.lstrip('/')}"
             headers = {'Authorization': f'Token {self.token}'}
-            response = requests.post(url,json=data,headers=headers,verify=False)
+            response = requests.post(url,json=data,headers=headers,verify=False,timeout=3)
             return response.json()
         except:
             return {}
