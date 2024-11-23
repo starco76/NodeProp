@@ -77,8 +77,10 @@ class MT5Handler:
             # with ProcessPoolExecutor(len(self.terminals)) as proccessor:
             proccess = []
             for idx, item in enumerate(self.terminals):
-                batch = batch_accounts[idx]
-                proccess += [proccessor.submit(self.collect_data, idx, batch)]
+                try:
+                    batch = batch_accounts[idx]
+                    proccess += [proccessor.submit(self.collect_data, idx, batch)]
+                except:pass
             for future in as_completed(proccess):
                 try:
                     data = future.result(timeout=2)

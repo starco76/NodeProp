@@ -12,6 +12,7 @@ class Request:
         self.token = token
         self.ip= self.get_server_ip()
         print(self.ip)
+        
     def get_server_ip(self):
         try:
             # Connect to an external host (Google's public DNS server)
